@@ -43,18 +43,24 @@ public class MySearchView extends SearchView {
 		super(context,attrs);
 		mContext=context;
 		
+		//initializing fields
 		initFields();
 	}
 	
+	//Setting font and style
 	public void setFont(Typeface font,int style)
 	{
 		this.mFont=font;
 		mSearchEditText.setTypeface(font,style);
 	}
+	
+	//Text size
 	public void setTextSize(float textSize)
 	{
 		mSearchEditText.setTextSize(textSize);
 	}
+	
+	//Setting colors
 	public void setTextStyle(int color,int hintColor)
 	{
 		mSearchEditText.setTextColor(color);
@@ -62,15 +68,20 @@ public class MySearchView extends SearchView {
 		
 	}
 	
+	//
 	public void setHintStyle(String hintText,int icon)
 	{
 		mSearchEditText.setHint(changeSpannableIcon(hintText, icon));
 	}
+	
+	//Changing frame view
 	public void setBackgroundFrame(int backgroundFrame)
 	{
 		
 		mSearchPlate.setBackgroundResource(backgroundFrame);
 	}
+	
+	//Customizing hint text and hint icon
 	private SpannableStringBuilder changeSpannableIcon(String hintText, int icon)
     {
         
@@ -102,29 +113,38 @@ public class MySearchView extends SearchView {
 		return mVoiceButton;
 	}
 
+	///Initializing fields using reflection
 	private void initFields()
 	{
+		//EditFrame
 		int editframeId=mContext.getResources().getIdentifier("android:id/search_edit_frame", null, null);
 		mSearchEditFrame=findViewById(editframeId);
 		
+		//EditText
 		int textId=mContext.getResources().getIdentifier("android:id/search_src_text", null, null);
 		mSearchEditText=(EditText) findViewById(textId);
 		
+		//Layout of edittext
 		int plateId=mContext.getResources().getIdentifier("android:id/search_plate", null, null);
 		mSearchPlate=findViewById(plateId);
 		
+		//Layout of submit button and voice button
 		int areaId=mContext.getResources().getIdentifier("android:id/submit_area", null, null);
 		mSubmitArea=findViewById(areaId);
 		
+		//Submit button
 		int subBtnId=mContext.getResources().getIdentifier("android:id/search_go_btn", null, null);
 		mSubmitButton=(ImageView) findViewById(subBtnId);
 		
+		//Close button
 		int closeBtnId=mContext.getResources().getIdentifier("android:id/search_close_btn", null, null);
 		mCloseButton=(ImageView) findViewById(closeBtnId);
 		
+		//Search icon
 		int hintId=mContext.getResources().getIdentifier("android:id/search_mag_icon", null, null);
 		mSearchHintIcon=(ImageView) findViewById(hintId);
 		
+		//Voice button
 		int voiceId=mContext.getResources().getIdentifier("android:id/search_voice_btn", null, null);
 		mVoiceButton=(ImageView) findViewById(voiceId);
 		
