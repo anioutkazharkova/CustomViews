@@ -127,6 +127,8 @@ public class MySearchView extends SearchView {
 		
 		int voiceId=mContext.getResources().getIdentifier("android:id/search_voice_btn", null, null);
 		mVoiceButton=(ImageView) findViewById(voiceId);
+		
+		mSearchHintIcon.setImageDrawable(null);
 	}
 	
 	

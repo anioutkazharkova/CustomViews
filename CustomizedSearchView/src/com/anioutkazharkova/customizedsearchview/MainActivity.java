@@ -17,13 +17,15 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         searchView=(MySearchView)findViewById(R.id.searchView);
        
+        //Changing colors and background frame
        searchView.setTextSize(20);
        searchView.setFont(Typeface.createFromAsset(getAssets(), "font.ttf"),Typeface.ITALIC);
        searchView.setTextStyle(getResources().getColor(R.color.text_white), getResources().getColor(R.color.hint_gray));
        searchView.setHintStyle("Enter text", R.drawable.search_light_icon);
        searchView.setBackgroundFrame(R.drawable.editframe);
        
-       searchView.getSearchIcon().setVisibility(View.GONE);
+       
+       
     }
 
 
