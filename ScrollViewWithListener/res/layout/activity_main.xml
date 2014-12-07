@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+  <com.anioutkazharkova.scrollviewwithlistener.views.ScrollViewWithListener
+      android:id="@+id/scroll"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" >
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        android:src="@drawable/kitten"
+        ></ImageView>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        android:src="@drawable/kitten"
+        ></ImageView>
+         </LinearLayout>
+    </com.anioutkazharkova.scrollviewwithlistener.views.ScrollViewWithListener>
+
+</LinearLayout>
