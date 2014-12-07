@@ -60,14 +60,11 @@ public class MySearchView extends SearchView {
 		int closeBtnId=mContext.getResources().getIdentifier("android:id/search_close_btn", null, null);
 		mCloseButton=(ImageView) findViewById(closeBtnId);
 		
+		int hintId=mContext.getResources().getIdentifier("android:id/search_mag_icon", null, null);
+		mSearchHintIcon=(ImageView) findViewById(hintId);
 		
-		/*mQueryTextView = (SearchAutoComplete) findViewById(R.id.search_src_text);		
-		mSearchPlate = findViewById(R.id.search_plate);
-		mSubmitArea = findViewById(R.id.submit_area);
-		mSubmitButton = findViewById(R.id.search_go_btn);
-		mCloseButton = (ImageView) findViewById(R.id.search_close_btn);
-		mVoiceButton = findViewById(R.id.search_voice_btn);
-		mSearchHintIcon = (ImageView) findViewById(R.id.search_mag_icon); */
+		int voiceId=mContext.getResources().getIdentifier("android:id/search_voice_btn", null, null);
+		mVoiceButton=(ImageView) findViewById(voiceId);
 	}
 	
 	
